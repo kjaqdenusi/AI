@@ -1,0 +1,43 @@
+Water Jug Puzzle | Project Description
+
+Full name: Kenny Adenusi
+Course title: Introduction to AI
+Submission date: 2025-09-12
+Assignment number and purpose:
+HW1 – Write rules and state space for a 5L/3L water jug puzzle
+
+Water Jug Puzzle
+This project is a creation of the classic water jug puzzle
+where you have a 5 liter jug and a 3 liter jug.
+The goal is to end with exactly 4 liter in the 5L jug.
+
+What the program does
+- represents the puzzle state as a an ordered list of numbers: (amount_in_5L, amount_in_3L).
+- defines simple rules: fill5, fill3, empty5, empty3, pour5to3, and pour3to5.
+- each rule checks for illegal/no-op moves (for example, you can’t fill a jug that’s already full).
+- has a tiny “main” method (demo_solution()) that runs a step-by-step sequence to reach the goal.
+- prints every step and the resulting state so it’s easy to follow.
+
+why its written like this
+i kept the code straightforward on purpose. I didn’t use search (like BFS/DFS) to
+automatically find the solution. Instead, I coded basic rules and then applied
+a known valid sequence. It shows the idea of a state space with legal moves,
+without getting too advanced.
+
+how to run
+1. Open notebook AI_HW1_WaterJugPuzzle.ipynb in Jupyter.
+2. Run single code cell. You will see steps and final state printed.
+
+Expected output (for example)
+Start state: (0, 0)
+Step 1: Filled 5L jug -> state (5, 0)
+Step 2: Poured 3L from 5L to 3L -> state (2, 3)
+Step 3: Emptied 3L jug -> state (2, 0)
+Step 4: Poured 2L from 5L to 3L -> state (0, 2)
+Step 5: Filled 5L jug -> state (5, 2)
+Step 6: Poured 1L from 5L to 3L -> state (4, 3)
+Step 7: Emptied 3L jug -> state (4, 0)
+Goal state expected: (4, 0)
+End state reached: (4, 0)
+
+That shows the program starts at (0,0) and ends at the goal (4,0).
